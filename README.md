@@ -90,37 +90,6 @@ flowchart LR
 
 ---
 
-## Data Model
-```mermaid
-erDiagram
-  USER {
-    ObjectId _id PK
-    string name
-    string email
-    string password (hashed)
-    enum role (admin|user)
-    date createdAt
-    date updatedAt
-  }
-
-  TASK {
-    ObjectId _id PK
-    string title
-    string description
-    date dueDate
-    enum priority (low|medium|high|urgent)
-    enum status (pending|in-progress|completed|blocked)
-    ObjectId createdBy FK
-    ObjectId assignee FK
-    date createdAt
-    date updatedAt
-  }
-
-  USER ||--o{ TASK : "createdBy"
-  USER ||--o{ TASK : "assignee"
-```
-
----
 
 ## User Roles & Permissions
 | Action | User | Admin |
@@ -332,4 +301,5 @@ root
 ---
 
 ## License
-MIT © Your Name
+MIT © Subham Agarwal(7029054307)
+VIT University
